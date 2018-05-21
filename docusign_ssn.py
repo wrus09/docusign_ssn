@@ -25,7 +25,7 @@ driver.find_element_by_xpath('//*[@id="Login"]').click()
 
 # NOTE: Must Authenticate Manually at this point due to security restrictions
 for i in range (15,0,-1):
-    print('Ya got ' + str(i) + ' seconds to authenticate, bro.',end='\r')
+    print('Ya got ' + str(i) + ' seconds to authenticate, bro.') # removed ,end='\r' for python 2
     time.sleep(1)
 
 
@@ -50,7 +50,7 @@ driver.find_element_by_xpath('/html/body/div/div/div/main/section/div[1]/div/for
 # Wait for stupid slow docusign page to load
 for i in range (32,0,-1):
     time.sleep(1)
-    print('Waiting ' + str(i) + ' seconds to continue...',end='\r')
+    print('Waiting ' + str(i) + ' seconds to continue...') # removed ,end='\r' for python 2
 
 driver.find_element_by_xpath('//*[@id="ng-app"]/body/div[1]/div/div[1]/div[1]/div/div[1]/div/div[1]/div/div[2]/div[1]/div/button[2]').click() # More dropdown
 driver.find_element_by_xpath("//*[contains(text(), 'Form Data') and contains(@type, 'button')]").click() # Form Data option
